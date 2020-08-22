@@ -36,3 +36,31 @@ Windows 10 Version 1909 专业版
 * 喷枪特效：鼠标就像喷枪一样，经过的地方显示轨迹。喷枪的特点是一开始的半径小，后来的半径大。因此需要画半径随着时间而增大到规定值的圆即可。
 * 彩球特效：鼠标经过的地方显示四散的彩色小球。彩色的RGB值用随机数产生器可以得到，移动的方向也可以由随机值得到。每一个彩色小球在动画存活时间内不断地向一开始随机得到的移动方向移动，同时透明度减少。
 * 星星特效：鼠标经过的地方显示一串坠落的星星。每颗星星设定存活时间，存活时间内不停地变小即可。
+
+| 文件名 | 说明 |
+| ------ | ---- |
+|mouse_follow_effct.exe|软件的可执行程序|
+|功能说明.pdf|功能说明的pdf版|
+|功能说明.md|功能说明的markdown文档|
+|演示图片.gif|软件演示动图|
+
+
+工程代码文件夹中：
+| 文件名 | 说明 |
+| ------ | ---- |
+|main.cpp|主程序代码|
+|widget.h|软件的主界面头文件，声明了用到的变量，重载了需要的event|
+|widget.cpp|软件的实现，画一个大的绘图区，组合各个特效组件|
+|drop.h|Drop类的头文件，继承了QWidget，结合QVariantAnimation类，实现水滴动画效果|
+|drop.cpp|Drop类的实现|
+|spray.h|Spray类的头文件，由于主要的功能一致，继承了Drop类，重载了重要的函数|
+|spray.cpp|Spray类的实现|
+|colorball.h|ColorBall类的头文件|
+|colorball.cpp|ColorBall类的实现|
+|star.h|Star类的头文件|
+|star.cpp|Star类的实现|
+|untitled.pro|QtCreator的项目文件|
+|untitled.pro.user|QtCreator的项目文件|
+|rat.ico|可执行程序文件的图标|
+|rat.png|程序的图标|
+|resource.qrc|Qt的资源文件|
